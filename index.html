@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Memory Gift</title>
+    <title>Memory Gift ❤️</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
 
@@ -23,50 +26,128 @@
 <body>
 
     <!-- Background -->
+
     <div class="background"></div>
 
-    <!-- Main Screen -->
+    <!-- Hearts -->
+
+    <div class="hearts">
+
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+
+    </div>
+
+    <!-- Sparkles -->
+
+    <div class="sparkles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- Main -->
+
     <main class="home">
 
         <!-- Logo -->
+
         <img src="images/logo.png" class="logo" alt="Logo">
 
         <!-- Title -->
+
         <h1>Memory Gift</h1>
 
         <p class="subtitle">
-            by خرزة و استك
+
+            خرزة و استك
+
         </p>
 
-        <!-- Gift Area -->
+        <!-- Gift -->
+
         <section class="gift-section">
 
-            <div id="giftBox">
+    <!-- Gift -->
 
-                <!-- هنرسم الصندوق بالـ CSS -->
-                <div class="gift-box">
+    <div id="giftBox">
 
-                    <div class="gift-lid"></div>
+        <div class="gift-box">
 
-                    <div class="gift-body"></div>
+            <div class="gift-lid"></div>
 
-                    <div class="gift-ribbon-v"></div>
+            <div class="gift-body"></div>
 
-                    <div class="gift-ribbon-h"></div>
+            <div class="gift-ribbon-v"></div>
 
-                </div>
+            <div class="gift-ribbon-h"></div>
 
-            </div>
+        </div>
+
+    </div>
+
+    <!-- Envelope -->
+
+    <div id="envelope" class="envelope hidden">
+
+        <div class="envelope-body">
+
+            <div class="envelope-flap"></div>
+
+            <div class="seal">❤️</div>
+
+        </div>
+
+    </div>
+
+    <!-- Letter -->
+
+    <div id="letter" class="letter hidden">
+
+        <div class="letter-card">
+
+            <h2>My Love ❤️</h2>
+
+            <p id="typingText"></p>
+
+            <button id="continueBtn" class="continue-btn hidden">
+
+                Continue ❤️
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </div>
+
+</div>
+
 
         </section>
 
-        <p class="hint">
-            Open My Gift ✨
+        <!-- Hint -->
+
+        <p id="hint" class="hint">
+
+            Tap The Gift To Begin ✨
+
         </p>
 
     </main>
 
     <!-- JavaScript -->
+
     <script src="js/app.js"></script>
 
 </body>

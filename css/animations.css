@@ -1,79 +1,281 @@
-@keyframes pulse{
+/* ===================================
+   PAGE FADE
+=================================== */
 
-0%{
-transform:scale(1);
-opacity:1;
-}
+.home{
 
-50%{
-transform:scale(1.05);
-opacity:.7;
-}
-
-100%{
-transform:scale(1);
-opacity:1;
-}
+    animation:fadePage 1.2s ease;
 
 }
 
-@keyframes shakeGift{
+@keyframes fadePage{
 
-0%{
-transform:rotate(0deg);
-}
+    from{
 
-20%{
-transform:rotate(-4deg);
-}
+        opacity:0;
 
-40%{
-transform:rotate(4deg);
-}
+        transform:translateY(25px);
 
-60%{
-transform:rotate(-3deg);
-}
+    }
 
-80%{
-transform:rotate(3deg);
-}
+    to{
 
-100%{
-transform:rotate(0deg);
-}
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
 
-.gift{
+/* ===================================
+   LOGO FLOAT
+=================================== */
 
-animation:shakeGift 2.5s infinite;
+.logo{
 
-transform-origin:center bottom;
-
-transition:.4s;
-
-}
-
-.gift:hover{
-
-transform:scale(1.05);
+    animation:logoFloat 5s ease-in-out infinite;
 
 }
 
-@keyframes fadeOut{
+@keyframes logoFloat{
 
-to{
+    0%{
 
-opacity:0;
-visibility:hidden;
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
 
 }
 
+/* ===================================
+   GIFT FLOAT
+=================================== */
+
+.gift-box{
+
+    animation:giftFloat 3.2s ease-in-out infinite;
+
 }
 
-.hideLoader{
+@keyframes giftFloat{
 
-animation:fadeOut .7s forwards;
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================
+   HEARTS
+=================================== */
+
+.hearts span{
+
+    animation:heartFloat 14s linear infinite;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) scale(.8);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.35;
+
+    }
+
+    80%{
+
+        opacity:.20;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) scale(1.5);
+
+        opacity:0;
+
+    }
+
+}/* ===================================
+   SPARKLES
+=================================== */
+
+.sparkles span{
+
+    animation:twinkle 3s ease-in-out infinite;
+
+}
+
+.sparkles span:nth-child(2){
+
+    animation-delay:.6s;
+
+}
+
+.sparkles span:nth-child(3){
+
+    animation-delay:1.2s;
+
+}
+
+.sparkles span:nth-child(4){
+
+    animation-delay:1.8s;
+
+}
+
+.sparkles span:nth-child(5){
+
+    animation-delay:2.4s;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+
+        transform:scale(.6);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.6);
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+        transform:scale(.6);
+
+    }
+
+}
+
+/* ===================================
+   HINT
+=================================== */
+
+.hint{
+
+    animation:hintGlow 2.5s ease-in-out infinite;
+
+}
+
+@keyframes hintGlow{
+
+    0%{
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.45;
+
+    }
+
+}
+
+/* ===================================
+   ENVELOPE
+=================================== */
+
+.envelope{
+
+    animation:envelopeFloat 3.5s ease-in-out infinite;
+
+}
+
+@keyframes envelopeFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================
+   HOVER EFFECTS
+=================================== */
+
+#giftBox:hover{
+
+    transform:scale(1.05);
+
+}
+
+.envelope:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+}
+
+.logo:hover{
+
+    transform:scale(1.04);
 
 }

@@ -59,18 +59,11 @@ console.log("JS Loaded");
 const letter = document.getElementById("letter");
 const typingText = document.getElementById("typingText");
 const continueBtn = document.getElementById("continueBtn");
-const letterTitle = document.querySelector("#letter h2");
-const storyLabel = document.querySelector(".story-label");
-const storyTitle = document.querySelector(".story-title");
-const memoryCaption = document.querySelector(".memory-caption p");
 
-const message = clientData.letterMessage;
+const message = `كل لحظة معاك كانت أجمل ذكرى في حياتي ❤️
+وده مجرد بداية للمفاجأة...`;
 
-storyLabel.textContent = clientData.storyLabel;
-storyTitle.innerHTML = `${clientData.storyTitleLine1}<br><span>${clientData.storyTitleLine2}</span>`;
 envelope.addEventListener("click", () => {
-
-    letterTitle.textContent = clientData.letterTitle;
 
     envelope.style.display = "none";
 
@@ -134,7 +127,6 @@ continueBtn.addEventListener("click", () => {
 
     letter.style.opacity = "0";
     letter.style.transform = "scale(.95)";
-    memoryCaption.textContent = clientData.caption;
     letter.style.transition = ".5s ease";
 
     setTimeout(() => {
@@ -163,7 +155,44 @@ memoriesSection.style.opacity = "0";
    MEMORIES DATA
 ========================= */
 
-const memories = clientData.memories;
+const memories = [
+
+    {
+        image: "images/photo1.jpg",
+        message: "اكتب هنا رسالة الصورة الأولى ❤️"
+    },
+
+    {
+        image: "images/memory2.jpg",
+        message: "اكتب هنا رسالة الصورة الثانية ❤️"
+    },
+
+    {
+        image: "images/memory3.jpg",
+        message: "اكتب هنا رسالة الصورة الثالثة ❤️"
+    },
+
+    {
+        image: "images/memory4.jpg",
+        message: "اكتب هنا رسالة الصورة الرابعة ❤️"
+    },
+
+    {
+        image: "images/memory5.jpg",
+        message: "اكتب هنا رسالة الصورة الخامسة ❤️"
+    },
+
+    {
+        image: "images/memory6.jpg",
+        message: "اكتب هنا رسالة الصورة السادسة ❤️"
+    },
+
+    {
+        image: "images/memory7.jpg",
+        message: "اكتب هنا رسالة الصورة السابعة ❤️"
+    }
+
+];
 
 let currentMemory = 0;
 
@@ -177,8 +206,10 @@ const nextMemory = document.getElementById("nextMemory");
 const memoriesSection = document.getElementById("memories");
 
 memoriesSection.style.display = "none";
+letter.style.display = "none";
+envelope.style.display = "none";
 
-const memoryDotsContainer = document.getElementById("memoryDots");
+const memoryDots = document.querySelectorAll(".memory-dots span");
 
 
 function showMemory(index) {
@@ -191,17 +222,14 @@ function showMemory(index) {
 
     memoryMessage.textContent = memories[index].message;
 
-    memoryDotsContainer.innerHTML = "";
+    memoryDots.forEach((dot, i) => {
 
-memories.forEach((memory, i) => {
-    const dot = document.createElement("span");
+        dot.classList.toggle(
+            "active",
+            i === index
+        );
 
-    if (i === index) {
-        dot.classList.add("active");
-    }
-
-    memoryDotsContainer.appendChild(dot);
-});
+    });
 
 }
 

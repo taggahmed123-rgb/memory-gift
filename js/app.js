@@ -67,7 +67,14 @@ const memoryCaption = document.querySelector(".memory-caption p");
 const message = clientData.letterMessage;
 
 storyLabel.textContent = clientData.storyLabel;
-storyTitle.innerHTML = `${clientData.storyTitleLine1}<br><span>${clientData.storyTitleLine2}</span>`;
+storyTitle.innerHTML = `
+    ${clientData.storyTitleLine1}
+    <br>
+    <span class="story-title-line" dir="auto">
+    ${clientData.storyTitleLine2}
+    <span class="story-heart">♥</span>
+</span>
+`;
 envelope.addEventListener("click", () => {
 
     letterTitle.textContent = clientData.letterTitle;

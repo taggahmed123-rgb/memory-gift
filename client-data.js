@@ -11,7 +11,7 @@ const clientData = {
 
     // ✨ العنوان الرئيسي فوق الصور
     storyTitleLine1: "أجمل لحظاتنا",
-storyTitleLine2: "مع بعض ❤️",
+storyTitleLine2: "love you to the moon & back",
 
     // 🖼️ الجملة الموجودة تحت الصور
     caption: "كل لحظة معاك كانت أجمل ذكرى في حياتي ❤️",

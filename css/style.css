@@ -1294,3 +1294,105 @@ button {
         clamp(12px, 2.5vh, 25px);
 }
 
+/* ===================================
+   AUTO CENTER HOME
+=================================== */
+
+.home {
+    min-height: 100dvh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: clamp(15px, 3vh, 30px);
+}
+
+/* مسافات مرنة بين عناصر الهوم */
+.home .logo {
+    width: clamp(150px, 30vw, 220px) !important;
+    height: auto !important;
+    transform: none !important;
+}
+
+.home h1 {
+    font-size: clamp(32px, 7vw, 48px);
+    margin-top: clamp(5px, 1vh, 12px);
+}
+
+.home .subtitle {
+    font-size: clamp(14px, 3.5vw, 18px);
+    margin-top: clamp(4px, 1vh, 10px);
+}
+
+.home .gift-section {
+    transform: scale(clamp(.65, 1vw + .55, .85));
+    transform-origin: center;
+    margin-top: clamp(5px, 2vh, 20px);
+}
+
+.home .hint {
+    font-size: clamp(13px, 3.5vw, 16px);
+    margin-top: clamp(5px, 2vh, 18px);
+}
+
+/* ===================================
+   RESPONSIVE ENVELOPE
+=================================== */
+
+.envelope {
+    width: min(88vw, 250px);
+    height: auto;
+    aspect-ratio: 250 / 170;
+    margin: auto;
+}
+
+.envelope-body {
+    width: 100%;
+    height: 100%;
+}
+
+.envelope-flap {
+    width: 100%;
+    height: 44%;
+}
+
+.seal {
+    width: clamp(40px, 15vw, 48px);
+    height: clamp(40px, 15vw, 48px);
+    top: 34%;
+}
+
+.envelope-text {
+    font-size: clamp(13px, 4vw, 16px);
+}
+
+/* ===================================
+   RESPONSIVE MEMORIES PAGE
+=================================== */
+
+.memories {
+    width: 100%;
+    min-height: 100dvh;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(12px, 3vh, 30px) clamp(12px, 4vw, 40px);
+}
+
+.memories-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

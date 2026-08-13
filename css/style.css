@@ -1546,8 +1546,8 @@ button {
 }
 
 .audio-button {
-    margin: 24px auto 0;
-    padding: 14px 24px;
+    margin: 14px auto 0;
+padding: 11px 20px;
 
     display: flex;
     align-items: center;
@@ -1561,7 +1561,7 @@ button {
     color: #FFFFFF;
 
     font-family: "Alexandria", sans-serif;
-    font-size: 15px;
+    font-size: 13px;
 
     cursor: pointer;
 
@@ -1678,6 +1678,17 @@ button {
     justify-content: center;
 
     transition: transform 0.25s ease;
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 13px solid #FFFFFF;
+
+    margin-left: 4px;
 }
 
 .audio-play-button:active {

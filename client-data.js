@@ -18,6 +18,9 @@ storyTitleLine2: "love you to the moon & back",
     // 🖼️ الجملة الموجودة تحت الصور
     caption: "كل لحظة معاك كانت أجمل ذكرى في حياتي ❤️",
 
+    // 🎵 قسم الصوت
+
+
     // 📸 صور العميل ورسالة كل صورة
     memories: [
         {
@@ -32,6 +35,13 @@ storyTitleLine2: "love you to the moon & back",
             image: "images/photo3.jpg",
             message: "ودي تالت ذكرى لينا ❤️"
         }
-    ]
+    ],
+    audio: {
+    file: "audio/test.mp3",
+    buttonText: "أغنيتنا المفضلة",
+    eyebrow: "JUST FOR YOU",
+    title: "fav Song",
+    trackName: "Our Special Song"
+}
 
 };

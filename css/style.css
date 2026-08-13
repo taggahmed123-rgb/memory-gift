@@ -1544,3 +1544,233 @@ button {
     right: auto !important;
     transform: none !important;
 }
+
+.audio-button {
+    margin: 24px auto 0;
+    padding: 14px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #B76E79;
+    color: #FFFFFF;
+
+    font-family: "Alexandria", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(75, 38, 38, 0.08);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.audio-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(75, 38, 38, 0.12);
+}
+
+.audio-button:active {
+    transform: scale(0.97);
+}
+
+.audio-button-icon {
+    font-size: 18px;
+}
+
+/* =========================
+   AUDIO SECTION
+========================= */
+
+.audio-section {
+    width: 100%;
+    min-height: 100dvh;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(20px, 5vw, 50px)
+             clamp(16px, 5vw, 40px);
+}
+
+.audio-content {
+    width: 100%;
+    max-width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.audio-label {
+    margin: 0 0 clamp(12px, 3vw, 20px);
+
+    color: #B88919;
+
+    font-size: clamp(12px, 3vw, 16px);
+    letter-spacing: 0.35em;
+}
+
+.audio-title {
+    margin: 0;
+
+    color: #4B2626;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(32px, 8vw, 56px);
+    line-height: 1.05;
+}
+
+.audio-track-name {
+    margin: 14px 0 28px;
+
+    color: #8F7770;
+
+    font-family: "Alexandria", sans-serif;
+    font-size: clamp(14px, 3.5vw, 18px);
+}
+
+.audio-player {
+    width: min(100%, 390px);
+
+    padding: clamp(22px, 5vw, 30px);
+
+    box-sizing: border-box;
+
+    border-radius: 35px;
+
+    background: #FFFDF9;
+
+    box-shadow:
+        0 18px 45px rgba(75, 38, 38, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-play-button {
+    width: clamp(64px, 18vw, 78px);
+    height: clamp(64px, 18vw, 78px);
+
+    border: none;
+    border-radius: 50%;
+
+    background: #B76E79;
+    color: white;
+
+    font-size: clamp(22px, 6vw, 28px);
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.25s ease;
+}
+
+.audio-play-button:active {
+    transform: scale(0.94);
+}
+
+.audio-progress {
+    width: 100%;
+    height: 6px;
+
+    margin-top: 28px;
+
+    border-radius: 999px;
+
+    background: #E9D8D4;
+
+    overflow: visible;
+
+    direction: ltr;
+
+    position: relative;
+}
+
+.audio-progress-bar {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #B76E79;
+
+    transition: width 0.1s linear;
+
+    direction: ltr;
+}
+
+.audio-progress-thumb {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #B76E79;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: auto;
+touch-action: none;
+cursor: grab;
+transition: transform 0.15s ease;
+}
+
+.audio-time {
+    width: 100%;
+
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #8F7770;
+
+    font-family: "Alexandria", sans-serif;
+    font-size: 12px;
+}
+
+.back-to-memories {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+
+    margin: 24px auto 0;
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #B76E79;
+    color: #FFFFFF;
+
+    font-family: "Alexandria", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 2;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}

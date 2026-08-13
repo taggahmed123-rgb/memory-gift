@@ -187,6 +187,139 @@ memoriesSection.style.display = "none";
 
 const memoryDotsContainer = document.getElementById("memoryDots");
 
+const audioButton = document.getElementById("audioButton");
+const audioButtonText = document.getElementById("audioButtonText");
+
+if (clientData.audio && clientData.audio.file) {
+    audioButton.style.display = "flex";
+    audioButtonText.textContent = clientData.audio.buttonText || "";
+}
+
+const homeSection = document.querySelector(".home");
+const audioSection = document.getElementById("audioSection");
+const audioTitle = document.getElementById("audioTitle");
+const audioLabel = document.getElementById("audioLabel");
+const audioTrackName = document.getElementById("audioTrackName");
+const audioPlayer = document.getElementById("audioPlayer");
+const audioPlayButton = document.getElementById("audioPlayButton");
+const backToMemories = document.getElementById("backToMemories");
+backToMemories.addEventListener("click", () => {
+
+    audioPlayer.pause();
+
+    audioSection.style.display = "none";
+    memoriesSection.style.display = "block";
+
+});
+const audioProgressBar = document.getElementById("audioProgressBar");
+const audioProgress = document.querySelector(".audio-progress");
+const audioProgressThumb = document.getElementById("audioProgressThumb");
+let isDraggingAudio = false;
+audioProgressThumb.addEventListener("pointerdown", () => {
+    isDraggingAudio = true;
+
+    audioProgressThumb.style.transform =
+        "translate(-50%, -50%) scale(1.35)";
+});
+audioProgress.addEventListener("pointermove", (e) => {
+
+    if (!isDraggingAudio) return;
+
+    const rect = audioProgress.getBoundingClientRect();
+
+    let position = e.clientX - rect.left;
+
+    position = Math.max(0, Math.min(position, rect.width));
+
+    const percentage = position / rect.width;
+
+    audioPlayer.currentTime =
+        percentage * audioPlayer.duration;
+
+});
+document.addEventListener("pointerup", () => {
+    isDraggingAudio = false;
+
+    audioProgressThumb.style.transform =
+        "translate(-50%, -50%) scale(1)";
+});
+audioProgress.addEventListener("click", (e) => {
+
+    const rect = audioProgress.getBoundingClientRect();
+
+    const clickPosition = e.clientX - rect.left;
+
+    const percentage = clickPosition / rect.width;
+
+    audioPlayer.currentTime =
+        percentage * audioPlayer.duration;
+
+});
+const audioCurrentTime = document.getElementById("audioCurrentTime");
+const audioDuration = document.getElementById("audioDuration");
+
+function formatTime(seconds) {
+    if (!Number.isFinite(seconds)) return "0:00";
+
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+
+    return `${minutes}:${secs.toString().padStart(2, "0")}`;
+}
+
+audioPlayer.addEventListener("loadedmetadata", () => {
+    audioDuration.textContent = formatTime(audioPlayer.duration);
+});
+
+audioPlayer.addEventListener("timeupdate", () => {
+
+    audioCurrentTime.textContent =
+        formatTime(audioPlayer.currentTime);
+
+    if (audioPlayer.duration) {
+        const progress =
+            (audioPlayer.currentTime / audioPlayer.duration) * 100;
+
+        audioProgressBar.style.width = `${progress}%`;
+        audioProgressThumb.style.left = `${progress}%`;
+    }
+});
+
+audioPlayer.src = clientData.audio.file;
+
+audioPlayButton.addEventListener("click", () => {
+    audioPlayer.addEventListener("ended", () => {
+    audioPlayButton.textContent = "▶";
+    audioProgressBar.style.width = "0%";
+audioProgressThumb.style.left = "0%";
+audioCurrentTime.textContent = "0:00";
+});
+
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        audioPlayButton.textContent = "Ⅱ";
+    } else {
+        audioPlayer.pause();
+        audioPlayButton.textContent = "▶";
+    }
+
+});
+
+audioButton.addEventListener("click", () => {
+
+    homeSection.style.display = "none";
+
+    memoriesSection.style.display = "none";
+
+    audioSection.style.display = "flex";
+
+    audioTitle.textContent = clientData.audio.title || "";
+    audioTrackName.textContent = clientData.audio.trackName || "";
+    audioLabel.textContent = clientData.audio.eyebrow;
+    audioPlayer.src = clientData.audio.file;
+
+});
+
 
 function showMemory(index) {
 

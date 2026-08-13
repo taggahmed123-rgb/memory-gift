@@ -239,6 +239,52 @@
 
         </div>
 
+        <button id="audioButton" class="audio-button" style="display: none;">
+    <span class="audio-button-icon">♡</span>
+    <span id="audioButtonText"></span>
+</button>
+
+    </div>
+
+</section>
+
+<!-- Audio Section -->
+
+<section id="audioSection" class="audio-section" style="display: none;">
+
+    <div class="audio-content">
+
+        <p id="audioLabel" class="audio-label"></p>
+
+        <h2 id="audioTitle" class="audio-title"></h2>
+
+        <p id="audioTrackName" class="audio-track-name"></p>
+
+        <div class="audio-player">
+
+            <audio id="audioPlayer" preload="metadata"></audio>
+
+            <button id="audioPlayButton" class="audio-play-button">
+                ▶
+            </button>
+
+            <div class="audio-progress">
+                <div id="audioProgressBar" class="audio-progress-bar"></div>
+                <span id="audioProgressThumb" class="audio-progress-thumb"></span>
+            </div>
+
+            <div class="audio-time">
+                <span id="audioCurrentTime">0:00</span>
+                <span id="audioDuration">0:00</span>
+            </div>
+
+        </div>
+
+        <!-- زر الرجوع يكون هنا -->
+        <button id="backToMemories" class="back-to-memories">
+             Back to Memories ←
+        </button>
+
     </div>
 
 </section>

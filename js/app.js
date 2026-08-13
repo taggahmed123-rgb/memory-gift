@@ -297,10 +297,10 @@ audioCurrentTime.textContent = "0:00";
 
     if (audioPlayer.paused) {
         audioPlayer.play();
-        audioPlayButton.textContent = "Ⅱ";
+        audioPlayButton.classList.add("playing");
     } else {
         audioPlayer.pause();
-        audioPlayButton.textContent = "▶";
+        audioPlayButton.classList.remove("playing");
     }
 
 });

@@ -1691,6 +1691,33 @@ padding: 11px 20px;
     margin-left: 4px;
 }
 
+.audio-play-button.playing .play-icon {
+    width: 4px;
+    height: 18px;
+
+    border: none;
+
+    background: #FFFFFF;
+
+    position: relative;
+
+    margin-left: 0;
+}
+
+.audio-play-button.playing .play-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 18px;
+
+    background: #FFFFFF;
+
+    left: 8px;
+    top: 0;
+}
+
 .audio-play-button:active {
     transform: scale(0.94);
 }

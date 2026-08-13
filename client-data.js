@@ -3,6 +3,8 @@ const clientData = {
     // 💌 عنوان الرسالة
     letterTitle: "تاج",
 
+    giftTitle: "ahmed Gift",
+
     // 💌 الرسالة التي تظهر بعد فتح الظرف
     letterMessage: `اكتب هنا رسالة العميل كاملة ❤️`,
 

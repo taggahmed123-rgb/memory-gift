@@ -290,3 +290,9 @@ nextMemory.addEventListener("click", () => {
 /* البداية */
 
 showMemory(0);
+
+const giftTitle = document.getElementById("giftTitle");
+
+if (giftTitle && clientData.giftTitle) {
+    giftTitle.textContent = clientData.giftTitle;
+}

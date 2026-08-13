@@ -1451,3 +1451,28 @@ button {
 .memory-card {
     margin-inline: auto;
 }
+
+.memories .story-title {
+    transform: translateY(20px);
+}
+
+.memories .memory-caption {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.memories .memory-caption span {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.memories .memory-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+}
+

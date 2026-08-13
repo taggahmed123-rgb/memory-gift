@@ -1475,4 +1475,30 @@ button {
     line-height: 1;
     text-align: center;
 }
+/* =========================================
+   FINAL MEMORIES PAGE FIX
+========================================= */
 
+/* كلمة love you فوق العنوان */
+.memories .story-label {
+    margin: 0 0 4px !important;
+    transform: none !important;
+}
+
+/* تقريب tag من love you */
+.memories .story-title {
+    margin-top: 0 !important;
+    transform: none !important;
+}
+
+/* شيل القلب الموجود فوق المستطيل */
+.memories .memory-caption > span {
+    display: none !important;
+}
+
+/* خلي المستطيل في المنتصف */
+.memories .memory-caption {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: min(92%, 720px);
+}

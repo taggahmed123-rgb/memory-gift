@@ -10,7 +10,7 @@ const clientData = {
     storyLabel: "love you",
 
     // ✨ العنوان الرئيسي فوق الصور
-    storyTitleLine1: "tag",
+    storyTitleLine1: "",
 storyTitleLine2: "love you to the moon & back",
 
     // 🖼️ الجملة الموجودة تحت الصور

@@ -1500,10 +1500,11 @@ button {
 .memories .memory-caption {
     width: min(92vw, 720px) !important;
     max-width: calc(100vw - 24px) !important;
-    margin-inline: auto !important;
     box-sizing: border-box !important;
+
     position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
+    left: 50% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: translateX(-50%) !important;
 }

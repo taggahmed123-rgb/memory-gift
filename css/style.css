@@ -526,6 +526,21 @@ margin-bottom:5px;
 =================================== */
 
 @media (max-width: 768px) {
+
+        .story-label {
+    transform: translateY(18px);
+}
+
+    .audio-button {
+    margin: 8px auto 0;
+    padding: 9px 16px;
+    font-size: 12px;
+}
+
+.audio-button-icon {
+    font-size: 14px;
+}
+
     .logo {
     width: clamp(170px, 45vw, 260px) !important;
     height: auto !important;
@@ -585,6 +600,14 @@ button{
     font-family:"Alexandria",sans-serif;
 
 }
+
+    .memory-scene {
+        height: 360px;
+    }
+
+    .memory-navigation {
+        margin-top: 16px;
+    }
 
 }
 /* =========================
@@ -1484,7 +1507,7 @@ button {
 /* كلمة love you فوق العنوان */
 .memories .story-label {
     margin: 0 0 4px !important;
-    transform: none !important;
+    transform: translateY(35px) !important;
 }
 
 /* تقريب tag من love you */
@@ -1681,27 +1704,66 @@ padding: 11px 20px;
 }
 
 .play-icon {
+    position: relative;
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+}
+
+.play-icon::before {
+    content: "";
+
+    position: absolute;
+
+    left: 5px;
+    top: 2px;
+
     width: 0;
     height: 0;
 
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    border-left: 13px solid #FFFFFF;
-
-    margin-left: 4px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #FFFFFF;
 }
 
 .audio-play-button.playing .play-icon {
+    width: 12px;
+    height: 18px;
+
+    margin: 0;
+
+    background: linear-gradient(
+    to right,
+    #FFFFFF 0 4px,
+    transparent 4px 8px,
+    #FFFFFF 8px 12px
+);
+
+    border: none;
+}
+
+.audio-play-button.playing .play-icon::before,
+.audio-play-button.playing .play-icon::after {
+    display: none;
+}
+
+.audio-play-button.playing .play-icon::before {
+    content: "";
+
+    position: absolute;
+
     width: 4px;
     height: 18px;
+
+    left: 1px;
+    top: 1px;
 
     border: none;
 
     background: #FFFFFF;
-
-    position: relative;
-
-    margin-left: 0;
 }
 
 .audio-play-button.playing .play-icon::after {

@@ -289,7 +289,7 @@ audioPlayer.src = clientData.audio.file;
 
 audioPlayButton.addEventListener("click", () => {
     audioPlayer.addEventListener("ended", () => {
-    audioPlayButton.textContent = "▶";
+    audioPlayButton.classList.remove("playing");
     audioProgressBar.style.width = "0%";
 audioProgressThumb.style.left = "0%";
 audioCurrentTime.textContent = "0:00";

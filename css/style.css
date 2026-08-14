@@ -1507,7 +1507,7 @@ button {
 /* كلمة love you فوق العنوان */
 .memories .story-label {
     margin: 0 0 4px !important;
-    transform: translateY(20px) !important;
+    transform: translateY(15px) !important;
 }
 
 /* تقريب tag من love you */
